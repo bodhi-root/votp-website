@@ -24,25 +24,47 @@ const { id, title } = Astro.props;
         </div>
     </div>
 
-    <div class="mantra-section">
-        <h3>Definitions</h3>
-        <div class="mantra-definitions">
-            <slot name="definitions" />
+    {Astro.slots.has('definitions') && (
+        <div class="mantra-section">
+            <h3>Definitions</h3>
+            <div class="mantra-definitions">
+                <slot name="definitions" />
+            </div>
         </div>
-    </div>
+    )}
 
-    <div class="mantra-section">
-        <h3>Translation</h3>
-        <div class="mantra-translation">
-            <slot name="translation" />
+    {Astro.slots.has('translation') && (
+        <div class="mantra-section">
+            <h3>Translation</h3>
+            <div class="mantra-translation">
+                <slot name="translation" />
+            </div>
         </div>
-    </div>
+    )}
 
     {Astro.slots.has('commentary') && (
         <div class="mantra-section">
             <h3>Commentary</h3>
             <div class="mantra-commentary">
                 <slot name="commentary" />
+            </div>
+        </div>
+    )}
+
+    {Astro.slots.has('notes') && (
+        <div class="mantra-section">
+            <h3>Notes</h3>
+            <div class="mantra-notes">
+                <slot name="notes" />
+            </div>
+        </div>
+    )}
+
+    {Astro.slots.has('resources') && (
+        <div class="mantra-section">
+            <h3>Resources</h3>
+            <div class="mantra-resources">
+                <slot name="resources" />
             </div>
         </div>
     )}
