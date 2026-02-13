@@ -230,6 +230,150 @@ nav a:hover {
     margin-top: 2rem;
 }
 
+/* Mantra Styles */
+.mantra-toc {
+    max-width: 1400px;
+    margin: 2rem auto;
+    padding: 0 2rem;
+    background: white;
+    border-radius: 8px;
+    padding: 2rem;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+}
+
+.mantra-toc h2 {
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: #2c3e50;
+    margin-bottom: 1rem;
+}
+
+.mantra-toc ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.mantra-toc li {
+    padding-left: 0;
+}
+
+.mantra-toc a {
+    color: #3498db;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+    display: block;
+    padding: 0.5rem;
+    border-radius: 4px;
+}
+
+.mantra-toc a:hover {
+    color: #2c3e50;
+    background: #ecf0f1;
+}
+
+.mantras-container {
+    max-width: 1400px;
+    margin: 2rem auto 4rem auto;
+    padding: 0 2rem;
+}
+
+.mantra {
+    background: white;
+    border-radius: 8px;
+    padding: 2.5rem;
+    margin-bottom: 3rem;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+    border-top: 4px solid #5d7a99;
+    scroll-margin-top: 2rem;
+}
+
+.mantra-title {
+    font-size: 2rem;
+    font-weight: 400;
+    color: #2c3e50;
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid #ecf0f1;
+}
+
+.mantra-section {
+    margin-bottom: 2rem;
+}
+
+.mantra-section h3 {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #5d7a99;
+    margin-bottom: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-size: 0.9rem;
+}
+
+.mantra-sanskrit {
+    font-size: 1.8rem;
+    line-height: 2.2;
+    color: #2c3e50;
+    font-family: 'Noto Sans Devanagari', 'Georgia', serif;
+}
+
+.mantra-sanskrit p {
+    margin-bottom: 0.5rem;
+}
+
+.mantra-transliteration {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: #34495e;
+    font-family: 'Georgia', serif;
+    font-style: italic;
+}
+
+.mantra-transliteration p {
+    margin-bottom: 0.5rem;
+}
+
+.mantra-definitions dl {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 0.75rem 1.5rem;
+    align-items: baseline;
+}
+
+.mantra-definitions dt {
+    font-weight: 600;
+    color: #5d7a99;
+    font-family: 'Georgia', serif;
+    font-style: italic;
+}
+
+.mantra-definitions dd {
+    color: #5a6c7d;
+    margin: 0;
+    font-family: 'Trebuchet MS', sans-serif;
+}
+
+.mantra-translation {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #2c3e50;
+    font-family: 'Georgia', serif;
+}
+
+.mantra-commentary {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: #5a6c7d;
+    font-family: 'Trebuchet MS', sans-serif;
+}
+
+.mantra-commentary p {
+    margin-bottom: 1rem;
+}
+
 /* Footer */
 footer {
     background: #2c3e50;
@@ -285,6 +429,34 @@ footer p {
 
     .link-list {
         grid-template-columns: 1fr;
+    }
+
+    .mantra-toc,
+    .mantras-container {
+        padding: 0 1.5rem;
+    }
+
+    .mantra {
+        padding: 1.5rem;
+    }
+
+    .mantra-sanskrit {
+        font-size: 1.5rem;
+        line-height: 2;
+    }
+
+    .mantra-transliteration {
+        font-size: 1.1rem;
+    }
+
+    .mantra-definitions dl {
+        grid-template-columns: 1fr;
+        gap: 0.5rem;
+    }
+
+    .mantra-definitions dt {
+        font-weight: 700;
+        margin-top: 0.5rem;
     }
 }
 

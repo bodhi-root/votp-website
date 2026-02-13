@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import Mantra from '../components/Mantra.astro';
 ---
 
 <BaseLayout title="Mantras - Visions on the Path">
@@ -10,29 +11,161 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         </div>
     </section>
 
-    <section class="content-grid">
-        <div class="card">
-            <h2>So-Ham</h2>
-            <p>"I am That" - Synchronize with the breath. Inhale "So," exhale "Ham." Let the rhythm guide you inward.</p>
-            <p class="card-meta">Foundation practice for breath awareness</p>
-        </div>
-
-        <div class="card">
-            <h2>Om Shanti</h2>
-            <p>Peace invocation. Repeat with intention, allowing each syllable to dissolve tension and invite tranquility.</p>
-            <p class="card-meta">Calming and centering</p>
-        </div>
-
-        <div class="card">
-            <h2>Om Namah Shivaya</h2>
-            <p>Honoring the transformative consciousness within. A classical mantra for inner purification and awakening.</p>
-            <p class="card-meta">Advanced practice</p>
-        </div>
-
-        <div class="card">
-            <h2>Gayatri Mantra</h2>
-            <p>Ancient invocation of divine illumination. Chant to invoke clarity, wisdom, and spiritual light.</p>
-            <p class="card-meta">Sacred Vedic mantra</p>
-        </div>
+    <section class="mantra-toc">
+        <h2>Mantras</h2>
+        <ul>
+            <li><a href="#purnam">Pūrṇam Mantra (Invocation of Wholeness)</a></li>
+            <li><a href="#purnam-2">Pūrṇam Mantra (Example 2)</a></li>
+            <li><a href="#purnam-3">Pūrṇam Mantra (Example 3)</a></li>
+        </ul>
     </section>
+
+    <div class="mantras-container">
+        <Mantra id="purnam" title="Pūrṇam Mantra (Invocation of Wholeness)">
+            <Fragment slot="sanskrit">
+                <p>ॐ पूर्णमदः पूर्णमिदम् पूर्णात् पूर्णमुदच्यते |</p>
+                <p>पूर्णस्य पूर्णमादाय पूर्णमेवावशिष्यते ||</p>
+                <p>ॐ शान्तिः शान्तिः शान्तिः ||</p>
+            </Fragment>
+
+            <Fragment slot="transliteration">
+                <p>oṃ pūrṇam-adaḥ pūrṇam-idam pūrṇāt-pūrṇam-udacyate</p>
+                <p>pūrṇasya pūrṇam-ādāya pūrṇam-evāvaśiṣyate</p>
+                <p>oṃ śāntiḥ śāntiḥ śāntiḥ</p>
+            </Fragment>
+
+            <Fragment slot="definitions">
+                <dl>
+                    <dt>pūrṇam</dt>
+                    <dd>Wholeness, completeness, fullness, lacking nothing</dd>
+
+                    <dt>adaḥ</dt>
+                    <dd>That (far away)</dd>
+
+                    <dt>idam</dt>
+                    <dd>This (present and here now, immediately available for perception)</dd>
+
+                    <dt>pūrṇāt</dt>
+                    <dd>"from pūrṇam"</dd>
+
+                    <dt>udacyate</dt>
+                    <dd>to come forth</dd>
+
+                    <dt>pūrṇasya</dt>
+                    <dd>of one who is full of pūrṇam</dd>
+
+                    <dt>ādāya</dt>
+                    <dd>Can mean to take away or to add to (and in this context might mean both)</dd>
+
+                    <dt>evāvaśiṣyate</dt>
+                    <dd>Remains (or "alone remains")</dd>
+
+                    <dt>śāntiḥ</dt>
+                    <dd>Peace</dd>
+                </dl>
+            </Fragment>
+
+            <Fragment slot="translation">
+                <p>That is whole, this is whole. From wholeness comes wholeness. When wholeness is taken from wholeness, wholeness alone remains.</p>
+            </Fragment>
+        </Mantra>
+
+        <Mantra id="purnam-2" title="Pūrṇam Mantra (Example 2)">
+            <Fragment slot="sanskrit">
+                <p>ॐ पूर्णमदः पूर्णमिदम् पूर्णात् पूर्णमुदच्यते |</p>
+                <p>पूर्णस्य पूर्णमादाय पूर्णमेवावशिष्यते ||</p>
+                <p>ॐ शान्तिः शान्तिः शान्तिः ||</p>
+            </Fragment>
+
+            <Fragment slot="transliteration">
+                <p>oṃ pūrṇam-adaḥ pūrṇam-idam pūrṇāt-pūrṇam-udacyate</p>
+                <p>pūrṇasya pūrṇam-ādāya pūrṇam-evāvaśiṣyate</p>
+                <p>oṃ śāntiḥ śāntiḥ śāntiḥ</p>
+            </Fragment>
+
+            <Fragment slot="definitions">
+                <dl>
+                    <dt>pūrṇam</dt>
+                    <dd>Wholeness, completeness, fullness, lacking nothing</dd>
+
+                    <dt>adaḥ</dt>
+                    <dd>That (far away)</dd>
+
+                    <dt>idam</dt>
+                    <dd>This (present and here now, immediately available for perception)</dd>
+
+                    <dt>pūrṇāt</dt>
+                    <dd>"from pūrṇam"</dd>
+
+                    <dt>udacyate</dt>
+                    <dd>to come forth</dd>
+
+                    <dt>pūrṇasya</dt>
+                    <dd>of one who is full of pūrṇam</dd>
+
+                    <dt>ādāya</dt>
+                    <dd>Can mean to take away or to add to (and in this context might mean both)</dd>
+
+                    <dt>evāvaśiṣyate</dt>
+                    <dd>Remains (or "alone remains")</dd>
+
+                    <dt>śāntiḥ</dt>
+                    <dd>Peace</dd>
+                </dl>
+            </Fragment>
+
+            <Fragment slot="translation">
+                <p>That is whole, this is whole. From wholeness comes wholeness. When wholeness is taken from wholeness, wholeness alone remains.</p>
+            </Fragment>
+        </Mantra>
+
+        <Mantra id="purnam-3" title="Pūrṇam Mantra (Example 3)">
+            <Fragment slot="sanskrit">
+                <p>ॐ पूर्णमदः पूर्णमिदम् पूर्णात् पूर्णमुदच्यते |</p>
+                <p>पूर्णस्य पूर्णमादाय पूर्णमेवावशिष्यते ||</p>
+                <p>ॐ शान्तिः शान्तिः शान्तिः ||</p>
+            </Fragment>
+
+            <Fragment slot="transliteration">
+                <p>oṃ pūrṇam-adaḥ pūrṇam-idam pūrṇāt-pūrṇam-udacyate</p>
+                <p>pūrṇasya pūrṇam-ādāya pūrṇam-evāvaśiṣyate</p>
+                <p>oṃ śāntiḥ śāntiḥ śāntiḥ</p>
+            </Fragment>
+
+            <Fragment slot="definitions">
+                <dl>
+                    <dt>pūrṇam</dt>
+                    <dd>Wholeness, completeness, fullness, lacking nothing</dd>
+
+                    <dt>adaḥ</dt>
+                    <dd>That (far away)</dd>
+
+                    <dt>idam</dt>
+                    <dd>This (present and here now, immediately available for perception)</dd>
+
+                    <dt>pūrṇāt</dt>
+                    <dd>"from pūrṇam"</dd>
+
+                    <dt>udacyate</dt>
+                    <dd>to come forth</dd>
+
+                    <dt>pūrṇasya</dt>
+                    <dd>of one who is full of pūrṇam</dd>
+
+                    <dt>ādāya</dt>
+                    <dd>Can mean to take away or to add to (and in this context might mean both)</dd>
+
+                    <dt>evāvaśiṣyate</dt>
+                    <dd>Remains (or "alone remains")</dd>
+
+                    <dt>śāntiḥ</dt>
+                    <dd>Peace</dd>
+                </dl>
+            </Fragment>
+
+            <Fragment slot="translation">
+                <p>That is whole, this is whole. From wholeness comes wholeness. When wholeness is taken from wholeness, wholeness alone remains.</p>
+            </Fragment>
+        </Mantra>
+    </div>
 </BaseLayout>
