@@ -397,6 +397,26 @@ nav a:hover {
     text-decoration: underline;
 }
 
+.mantra-back-to-top {
+    margin-top: 1.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid #ecf0f1;
+    text-align: left;
+}
+
+.mantra-back-to-top a {
+    color: #3498db;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: color 0.3s ease;
+    display: inline-block;
+}
+
+.mantra-back-to-top a:hover {
+    color: #2c3e50;
+    text-decoration: underline;
+}
+
 /* Footer */
 footer {
     background: #2c3e50;
