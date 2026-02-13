@@ -342,10 +342,24 @@ nav a:hover {
 }
 
 .mantra-translation {
-    font-size: 1.1rem;
-    line-height: 1.8;
-    color: #2c3e50;
+    font-size: 1.3rem;
+    line-height: 2;
+    color: #1a1a1a;
     font-family: 'Georgia', serif;
+    font-weight: 400;
+    background: #f9fafb;
+    padding: 1.5rem;
+    border-radius: 6px;
+    border-left: 4px solid #5d7a99;
+    margin: 1rem 0;
+}
+
+.mantra-translation p {
+    margin-bottom: 0.75rem;
+}
+
+.mantra-translation p:last-child {
+    margin-bottom: 0;
 }
 
 .mantra-commentary {
@@ -368,6 +382,17 @@ nav a:hover {
 
 .mantra-notes p {
     margin-bottom: 1rem;
+}
+
+.mantra-notes a {
+    color: #3498db;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.mantra-notes a:hover {
+    color: #2c3e50;
+    text-decoration: underline;
 }
 
 .mantra-resources {
