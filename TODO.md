@@ -1,9 +1,12 @@
+## Home Page
+
+Replace main image (lotus flower?)
+CONSIDER: replace top-left image with zen circle.
+Replace images in bottom links with blog graphics.
+
 ## Mantras
 
-Add "link to top" to each mantra
-Add link to Blog article (if it exists)
-Add logo at top-right of hero
-Fill out with more mantras
+Add logo at top-right of hero (om symbol or design?)
 
 Add sanskrit pronunciation page somewhere
 (link to other?)
