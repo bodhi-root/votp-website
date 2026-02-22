@@ -70,7 +70,7 @@ import yogaSutras from '../data/yoga_sutras.json';
     /* Verse Content Wrapper with Arrow Navigation */
     .verse-content-wrapper {
         display: flex;
-        align-items: center;
+        align-items: flex-start;
         gap: 1.5rem;
         margin-bottom: 2rem;
     }
@@ -88,6 +88,9 @@ import yogaSutras from '../data/yoga_sutras.json';
         cursor: pointer;
         transition: all 0.2s ease;
         color: #4A5568;
+        margin-top: 4rem;
+        position: sticky;
+        top: 2rem;
     }
 
     .arrow-btn:hover {
