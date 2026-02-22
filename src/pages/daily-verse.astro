@@ -51,19 +51,15 @@ const verse = {
                 </button>
             </div>
 
-            <!-- Mode Toggle Tabs -->
-            <div class="mode-toggle">
-                <button class="mode-tab active" data-mode="sequential">Sequential</button>
-                <button class="mode-tab" data-mode="random">Random</button>
+            <!-- Random Verse Button -->
+            <div class="random-verse-section">
+                <button class="random-verse-btn">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M21.5 2v6h-6M2.5 22v-6h6M2 11.5a10 10 0 0 1 18.8-4.3M22 12.5a10 10 0 0 1-18.8 4.2"/>
+                    </svg>
+                    Random Verse
+                </button>
             </div>
-
-            <!-- Mode Description -->
-            <p class="mode-description" data-mode="sequential">
-                Arrows navigate to next and previous verses.
-            </p>
-            <p class="mode-description hidden" data-mode="random">
-                Arrows navigate to random verses based on the date.
-            </p>
         </div>
     </section>
 </BaseLayout>
@@ -165,54 +161,41 @@ const verse = {
         margin: 0 auto;
     }
 
-    /* Mode Toggle Tabs */
-    .mode-toggle {
+    /* Random Verse Section */
+    .random-verse-section {
         display: flex;
-        gap: 0;
         justify-content: center;
-        border-bottom: 2px solid #E2E8F0;
-        max-width: 400px;
-        margin: 0 auto;
+        margin-top: 2rem;
     }
 
-    .mode-tab {
-        padding: 0.75rem 2rem;
-        background: transparent;
-        border: none;
-        border-bottom: 3px solid transparent;
-        color: #718096;
+    .random-verse-btn {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        padding: 0.75rem 1.5rem;
+        background: white;
+        border: 2px solid #CBD5E0;
+        border-radius: 8px;
+        color: #4A5568;
         font-size: 0.95rem;
         font-weight: 600;
         cursor: pointer;
         transition: all 0.2s ease;
-        position: relative;
-        top: 2px;
     }
 
-    .mode-tab:hover {
-        color: #4A5568;
+    .random-verse-btn:hover {
         background: #F7FAFC;
-    }
-
-    .mode-tab.active {
+        border-color: #4A5568;
         color: #2D3748;
-        border-bottom-color: #4A5568;
     }
 
-    /* Mode Description */
-    .mode-description {
-        text-align: center;
-        color: #718096;
-        font-size: 0.9rem;
-        margin-top: 1rem;
-        line-height: 1.6;
-        max-width: 400px;
-        margin-left: auto;
-        margin-right: auto;
+    .random-verse-btn:active {
+        transform: scale(0.98);
     }
 
-    .mode-description.hidden {
-        display: none;
+    .random-verse-btn svg {
+        width: 18px;
+        height: 18px;
     }
 
     /* Responsive Design */
@@ -251,57 +234,34 @@ const verse = {
             font-size: 1rem;
         }
 
-        .mode-toggle {
-            max-width: 100%;
-        }
-
-        .mode-tab {
-            flex: 1;
-            padding: 0.75rem 1rem;
-            font-size: 0.875rem;
+        .random-verse-btn {
+            width: 100%;
+            max-width: 300px;
+            justify-content: center;
         }
     }
 </style>
 
 <script>
-    // Mode toggle functionality (placeholder)
     document.addEventListener('DOMContentLoaded', () => {
-        const modeTabs = document.querySelectorAll<HTMLButtonElement>('.mode-tab');
-        const modeDescriptions = document.querySelectorAll<HTMLParagraphElement>('.mode-description');
-
-        modeTabs.forEach(tab => {
-            tab.addEventListener('click', () => {
-                modeTabs.forEach(t => t.classList.remove('active'));
-                tab.classList.add('active');
-
-                const mode = tab.dataset.mode;
-
-                // Show/hide appropriate description
-                modeDescriptions.forEach(desc => {
-                    if (desc.dataset.mode === mode) {
-                        desc.classList.remove('hidden');
-                    } else {
-                        desc.classList.add('hidden');
-                    }
-                });
-
-                console.log(`Mode switched to: ${mode}`);
-                // Logic will be implemented later
-            });
-        });
-
         // Navigation functionality (placeholder)
         const prevBtn = document.querySelector<HTMLButtonElement>('.prev-btn');
         const nextBtn = document.querySelector<HTMLButtonElement>('.next-btn');
+        const randomBtn = document.querySelector<HTMLButtonElement>('.random-verse-btn');
 
         prevBtn?.addEventListener('click', () => {
             console.log('Previous verse clicked');
-            // Logic will be implemented later
+            // Logic will be implemented later - navigate to previous day's verse
         });
 
         nextBtn?.addEventListener('click', () => {
             console.log('Next verse clicked');
-            // Logic will be implemented later
+            // Logic will be implemented later - navigate to next day's verse
+        });
+
+        randomBtn?.addEventListener('click', () => {
+            console.log('Random verse clicked');
+            // Logic will be implemented later - pick random date and show that verse
         });
     });
 </script>
