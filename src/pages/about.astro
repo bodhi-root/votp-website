@@ -1,59 +1,102 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import PullQuote from '../components/PullQuote.astro';
 ---
 
 <BaseLayout title="About - Visions on the Path">
+    <!-- 
     <section class="hero">
         <div class="hero-content">
-            <h1>About Visions on the Path</h1>
-            <p>Our intention is simplicity: remove what's not needed, support what is, and invite quiet transformation through the practice of Kriya Yoga.</p>
+            <h1>Welcome and Namaste</h1>
         </div>
     </section>
+    -->
 
-    <section class="content-grid">
-        <div class="card">
-            <h2>Our Philosophy</h2>
-            <p>We believe in direct experience over dogma, practice over theory, and inner silence over outer noise.
-            Kriya Yoga is a practical science for the modern seeker.</p>
-            <p class="card-meta">Rooted in tradition, relevant today</p>
-        </div>
+    <section class="about-content">
+        <div class="about-text">
+            <h1>Welcome and Namaste</h1>
+            <p>
+                Hello! And welcome to my corner of the Internet.
+            </p>
 
-        <div class="card">
-            <h2>What is Kriya Yoga?</h2>
-            <p>An ancient meditation technique focused on breath, energy, and awareness.
-            It systematically calms the mind and awakens deeper states of consciousness.</p>
-            <p class="card-meta">Suitable for all backgrounds</p>
-        </div>
+            <h2>About Me</h2>
+            <p>
+                In 2022, I began practicing Kriya Yoga, and it has been life changing. Under the instruction of Ryan Kurczak at <a href="https://kriyayogaonline.com/">Kriya Yoga Online</a>, I learned meditative and contemplative practices that have allowed me to connect with the Truth of myself and this world. In the years that followed, I cultivated an inner peace and contentment I had never before experienced. I have found a depth and firmness in my philosophy and wordview that I had only glimpsed before. I sincerely and heartfully hope that everyone finds what they are looking for. Perhaps the things I have found along my way will be helpful to others in search of that same peace. 
+            </p>
+            <p>
+                Prior to this, I had spent most of my life in a mix of Christian-Buddhist-Zen philosophy that saw the connection between all things but didn't know how to really feel it, to embody it, or to live in a way that aligned with it. I still struggled with depression, existential despair, and confusion over why we are here living this life and what we are supposed to do with that. I'm forever thankful to have found a teacher and a practice that helped me bring the various threads of my life together into a cohesive whole. I now explore the universe and myself in a manner that goes beyond words, beyond the experience of an individual life, and one which I believe is purifying my heart, my consciousness, and a small bit of the universal soul and consciousness as well. If that sounds kind of crazy, well... maybe it is. That's probably what I would have said just a few years ago. But today it is a large part of me that I can't imagine living without.
+            </p>
+            <h2>Visions on the Path</h2>
+            <p>
+                When I was about 20, I had three "visions" that felt like they literally saved my life. They involved the unity of space and time and the limits of the mind. As I began Kriya Yoga meditation, I started to have new "visions" and insights along the way. I thought early on that "Visions on the Path" would be a good way to collect these visions and thoughts into a book or diary of sorts. The full title was going to be "Visions on the Path (Towards Enlightenment)." I don't know if I'm actually going to find enlightenment in this life, but I feel like I am at least wandering in that direction. This is my humble way to share what has helped me in the hopes that it might help others. Each of walks a different path though. So take what is useful and leave the rest behind. I hope you find what you are looking for.
+            </p>
 
-        <div class="card">
-            <h2>Who This Is For</h2>
-            <p>Anyone seeking clarity, peace, and spiritual growth. No prior experience needed—just openness,
-            consistency, and a willingness to observe yourself honestly.</p>
-            <p class="card-meta">Beginners welcome</p>
-        </div>
+            <h2>Gurus and Lineage</h2>
+            <p>
+                I have been influenced and learned from many teachers. For Kriya Yoga, my primary teacher/guru is Ryan Kurczak. In order to give a better sense of the lineage and teachers that have influenced me, I created a "Guru Board" that lists the teachers and lineages that have influenced me. You can read more about it in this article:
+                <a href="https://visionsonthepathblog.substack.com/p/kriya-yoga-guru-board" target="_blank" rel="noopener noreferrer">Article About My "Guru Board"</a>
 
-        <div class="card">
-            <h2>The Approach</h2>
-            <p>Clean design. Clear instruction. No clutter. We focus on what matters: your practice,
-            your breath, and your gradual unfolding into stillness.</p>
-            <p class="card-meta">Minimalist and accessible</p>
-        </div>
-    </section>
+                <a href="https://visionsonthepathblog.substack.com/p/kriya-yoga-guru-board">Article About My "Guru Board"</a>
+            </p>
+            <p>
+                <img src="/public/guru-board.webp" alt="Guru Board" style="max-width:100%;height:auto;margin-top:1rem;">
+            </p>
 
-    <section class="featured">
-        <div class="featured-content">
-            <h2>Our Lineage</h2>
-            <div class="card">
-                <p style="line-height: 1.8;">
-                    Visions on the Path honors the Kriya Yoga lineage passed down through Mahavatar Babaji,
-                    Lahiri Mahasaya, Sri Yukteswar, and Paramahansa Yogananda. We draw from this profound
-                    tradition while presenting the teachings in a clear, contemporary format suitable for
-                    modern practitioners navigating busy lives.
+            <h2>Namaste</h2>
+            <p>
+                Ram Dass explains the word "namaste" in a way that shines light upon our soul and the purpose of spiritual life and study:
+            </p>
+            <PullQuote
+                imageSrc="/public/ram-dass.jpg"
+                imageAlt="Ram Dass">
+                <p>"In India when we meet and part we often say, “Namasté,” which means: I honor the place in you where the entire universe resides; I honor the place in you of love, of light, of truth, of peace. I honor the place within you where, if you are in that place in you, and I am in that place in me, there is only one of us. Namasté"
                 </p>
-                <p class="card-meta" style="margin-top: 1.5rem;">
-                    Based in practice, informed by lineage, designed for you.
-                </p>
-            </div>
+            </PullQuote>
+            
         </div>
     </section>
 </BaseLayout>
+
+<style>
+    .about-content {
+        max-width: 1400px;
+        margin: 2rem auto 4rem auto;
+        padding: 0 2rem;
+    }
+
+    .about-text {
+        max-width: 900px;
+    }
+
+    .about-text p {
+        font-size: 1.1rem;
+        color: #5a6c7d;
+        line-height: 1.7;
+        font-family: 'Trebuchet MS', sans-serif;
+        font-weight: 400;
+        letter-spacing: 0.3px;
+        margin-bottom: 1rem;
+    }
+
+    .about-text a {
+        color: #3498db;
+        text-decoration: none;
+        transition: color 0.3s ease;
+    }
+
+    .about-text a:hover {
+        color: #2c3e50;
+        text-decoration: underline;
+    }
+
+    @media (max-width: 768px) {
+        .about-content {
+            padding: 0 1.5rem;
+            margin: 1.5rem auto 4rem auto;
+        }
+
+        .about-text p {
+            font-size: 1rem;
+        }
+    }
+</style>
