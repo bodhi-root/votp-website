@@ -1,15 +1,6 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-
-// Mock data - will be replaced with actual logic later
-const verse = {
-    index: 1,
-    pada: 1,
-    sutra: 1,
-    devanagari: "अथ योगानुशासनम्॥१॥",
-    iast: "Atha yogānuśāsanam",
-    english: "And now begins (atha) the instruction (anuśāsanam) regarding Yoga (yoga)||1||"
-};
+import yogaSutras from '../data/yoga_sutras.json';
 ---
 
 <BaseLayout title="Daily Verse - Visions on the Path">
@@ -33,14 +24,14 @@ const verse = {
 
                 <!-- Verse Content -->
                 <div class="verse-content">
-                    <p class="verse-date">January 1, 2026</p>
-                    <h2 class="verse-title">Yoga Sutra {verse.pada}.{verse.sutra}</h2>
+                    <p class="verse-date" id="verse-date">Loading...</p>
+                    <h2 class="verse-title" id="verse-title">Yoga Sutra</h2>
 
-                    <p class="verse-devanagari">{verse.devanagari}</p>
+                    <p class="verse-devanagari" id="verse-devanagari"></p>
 
-                    <p class="verse-iast">{verse.iast}</p>
+                    <p class="verse-iast" id="verse-iast"></p>
 
-                    <p class="verse-english">{verse.english}</p>
+                    <p class="verse-english" id="verse-english"></p>
                 </div>
 
                 <!-- Right Arrow -->
@@ -242,26 +233,107 @@ const verse = {
     }
 </style>
 
-<script>
+<script define:vars={{ yogaSutras }}>
+    // Constants
+    const START_DATE = new Date('2026-01-01');
+    const TOTAL_VERSES = yogaSutras.length;
+
+    // Get current date from URL or use today
+    function getCurrentDate() {
+        const urlParams = new URLSearchParams(window.location.search);
+        const dateParam = urlParams.get('date');
+        if (dateParam) {
+            const date = new Date(dateParam + 'T00:00:00');
+            if (!isNaN(date.getTime())) {
+                return date;
+            }
+        }
+        return new Date();
+    }
+
+    // Calculate verse index based on date
+    function getVerseForDate(date) {
+        const diffTime = date.getTime() - START_DATE.getTime();
+        const daysSinceStart = Math.floor(diffTime / (1000 * 60 * 60 * 24));
+        const verseIndex = ((daysSinceStart % TOTAL_VERSES) + TOTAL_VERSES) % TOTAL_VERSES;
+        return yogaSutras[verseIndex];
+    }
+
+    // Format date for display
+    function formatDate(date) {
+        return date.toLocaleDateString('en-US', {
+            year: 'numeric',
+            month: 'long',
+            day: 'numeric'
+        });
+    }
+
+    // Update the page content
+    function updateVerse(date) {
+        const verse = getVerseForDate(date);
+
+        document.getElementById('verse-date').textContent = formatDate(date);
+        document.getElementById('verse-title').textContent = `Yoga Sutra ${verse.pada}.${verse.sutra}`;
+        document.getElementById('verse-devanagari').textContent = verse.devanagari;
+        document.getElementById('verse-iast').textContent = verse.iast;
+        document.getElementById('verse-english').textContent = verse.english;
+
+        // Update URL without reloading
+        const dateString = date.toISOString().split('T')[0];
+        const newUrl = `${window.location.pathname}?date=${dateString}`;
+        window.history.pushState({ date: dateString }, '', newUrl);
+    }
+
+    // Initialize page
     document.addEventListener('DOMContentLoaded', () => {
-        // Navigation functionality (placeholder)
-        const prevBtn = document.querySelector<HTMLButtonElement>('.prev-btn');
-        const nextBtn = document.querySelector<HTMLButtonElement>('.next-btn');
-        const randomBtn = document.querySelector<HTMLButtonElement>('.random-verse-btn');
+        const prevBtn = document.querySelector('.prev-btn');
+        const nextBtn = document.querySelector('.next-btn');
+        const randomBtn = document.querySelector('.random-verse-btn');
 
+        // Load initial verse
+        updateVerse(getCurrentDate());
+
+        // Handle browser back/forward buttons
+        window.addEventListener('popstate', (event) => {
+            const date = event.state?.date ? new Date(event.state.date + 'T00:00:00') : new Date();
+            updateVerse(date);
+        });
+
+        // Previous day
         prevBtn?.addEventListener('click', () => {
-            console.log('Previous verse clicked');
-            // Logic will be implemented later - navigate to previous day's verse
+            const currentDate = getCurrentDate();
+            const prevDate = new Date(currentDate);
+            prevDate.setDate(prevDate.getDate() - 1);
+            updateVerse(prevDate);
         });
 
+        // Next day
         nextBtn?.addEventListener('click', () => {
-            console.log('Next verse clicked');
-            // Logic will be implemented later - navigate to next day's verse
+            const currentDate = getCurrentDate();
+            const nextDate = new Date(currentDate);
+            nextDate.setDate(nextDate.getDate() + 1);
+            updateVerse(nextDate);
         });
 
+        // Random verse - pick a random date between today and 194 days ago
         randomBtn?.addEventListener('click', () => {
-            console.log('Random verse clicked');
-            // Logic will be implemented later - pick random date and show that verse
+            const today = new Date();
+            const currentDate = getCurrentDate();
+            const currentDateString = currentDate.toISOString().split('T')[0];
+
+            let randomDate;
+            let randomDateString;
+
+            // Keep generating random dates until we get one different from current
+            do {
+                // Random number of days ago (0 to 194)
+                const daysAgo = Math.floor(Math.random() * 195);
+                randomDate = new Date(today);
+                randomDate.setDate(randomDate.getDate() - daysAgo);
+                randomDateString = randomDate.toISOString().split('T')[0];
+            } while (randomDateString === currentDateString);
+
+            updateVerse(randomDate);
         });
     });
 </script>
