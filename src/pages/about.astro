@@ -4,21 +4,18 @@ import PullQuote from '../components/PullQuote.astro';
 ---
 
 <BaseLayout title="About - Visions on the Path">
-    <!-- 
     <section class="hero">
         <div class="hero-content">
             <h1>Welcome and Namaste</h1>
+            <p>Hello! Did you click "About" wondering who I am? Well, let me tell you...</p>
+        </div>
+        <div class="hero-visual">
+            <img src="/enso-circle.png" alt="Enso Circle" width="280" height="280" />
         </div>
     </section>
-    -->
 
     <section class="about-content">
         <div class="about-text">
-            <h1>Welcome and Namaste</h1>
-            <p>
-                Hello! And welcome to my corner of the Internet.
-            </p>
-
             <h2>About Me</h2>
             <p>
                 In 2022, I began practicing Kriya Yoga, and it has been life changing. Under the instruction of Ryan Kurczak at <a href="https://kriyayogaonline.com/">Kriya Yoga Online</a>, I learned meditative and contemplative practices that have allowed me to connect with the Truth of myself and this world. In the years that followed, I cultivated an inner peace and contentment I had never before experienced. I have found a depth and firmness in my philosophy and wordview that I had only glimpsed before. I sincerely and heartfully hope that everyone finds what they are looking for. Perhaps the things I have found along my way will be helpful to others in search of that same peace. 
@@ -56,47 +53,3 @@ import PullQuote from '../components/PullQuote.astro';
         </div>
     </section>
 </BaseLayout>
-
-<style>
-    .about-content {
-        max-width: 1400px;
-        margin: 2rem auto 4rem auto;
-        padding: 0 2rem;
-    }
-
-    .about-text {
-        max-width: 900px;
-    }
-
-    .about-text p {
-        font-size: 1.1rem;
-        color: #5a6c7d;
-        line-height: 1.7;
-        font-family: 'Trebuchet MS', sans-serif;
-        font-weight: 400;
-        letter-spacing: 0.3px;
-        margin-bottom: 1rem;
-    }
-
-    .about-text a {
-        color: #3498db;
-        text-decoration: none;
-        transition: color 0.3s ease;
-    }
-
-    .about-text a:hover {
-        color: #2c3e50;
-        text-decoration: underline;
-    }
-
-    @media (max-width: 768px) {
-        .about-content {
-            padding: 0 1.5rem;
-            margin: 1.5rem auto 4rem auto;
-        }
-
-        .about-text p {
-            font-size: 1rem;
-        }
-    }
-</style>

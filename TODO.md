@@ -13,6 +13,9 @@ Add sanskrit pronunciation page somewhere
 
 ## Before Committing
 
-Squash down all the commits so we don't have a big ugly history on main
+CONSIDER: Squash down all the commits so we don't have a big ugly history on main
 
+## Resurce Page
+
+Build this page. (We can put the website up without it though)
 
