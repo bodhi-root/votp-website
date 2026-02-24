@@ -251,7 +251,7 @@ nav a:hover {
 }
 
 nav.mantra-toc {
-    margin-top: 1.5rem;
+    margin: 1.5rem 0;
     align-items: start;
 }
 
@@ -312,7 +312,8 @@ nav.mantra-toc {
 .mantra-section h3 {
     font-size: 1.2rem;
     font-weight: 500;
-    color: #5d7a99;
+    /* color: #5d7a99; */
+    color: #c6ced7;
     margin-bottom: 0.5rem;
     text-transform: uppercase;
     letter-spacing: 0.5px;
@@ -335,11 +336,15 @@ nav.mantra-toc {
     line-height: 1.6;
     color: #34495e;
     font-family: 'Georgia', serif;
-    font-style: italic;
+    /*font-style: italic;*/
 }
 
 .mantra-transliteration p {
     margin-bottom: 0.35rem;
+}
+
+.mantra-definitions {
+    padding: 1rem 1.5rem;
 }
 
 .mantra-definitions dl {
@@ -371,8 +376,10 @@ nav.mantra-toc {
     background: #f9fafb;
     padding: 1rem;
     border-radius: 6px;
-    border-left: 4px solid #5d7a99;
-    margin: 0.5rem 0;
+    border-left: 4px solid #7c8793;
+    border-right: 4px solid #7c8793;
+    /*border-right: 4px solid #5d7a99; */
+    margin: 1rem 0 0.5rem 0;
 }
 
 .mantra-translation p {
@@ -477,6 +484,7 @@ nav.mantra-toc {
     padding: 1.5rem;
     border-radius: 6px;
     border-left: 4px solid #5d7a99;
+    border-right: 4px solid #5d7a99;
     margin: 1.5rem 0;
 }
 
