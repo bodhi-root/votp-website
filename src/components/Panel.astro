@@ -1,0 +1,18 @@
+---
+interface Props {
+    id?: string;
+    title: string;
+}
+
+const { id, title } = Astro.props;
+---
+
+<article class="panel" id={id}>
+    <h2 class="panel-title">{title}</h2>
+    <div class="panel-content">
+        <slot />
+    </div>
+    <div class="panel-back-to-top">
+        <a href="#top">↑ Back to top</a>
+    </div>
+</article>

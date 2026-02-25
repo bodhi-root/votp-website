@@ -286,7 +286,8 @@ nav.mantra-toc {
     padding: 0 2rem;
 }
 
-.mantra {
+/* Panel - Base component styles */
+.panel {
     background: white;
     border-radius: 8px;
     padding: 2.5rem;
@@ -296,7 +297,7 @@ nav.mantra-toc {
     scroll-margin-top: 2rem;
 }
 
-.mantra-title {
+.panel-title {
     font-size: 2rem;
     font-weight: 400;
     color: #2c3e50;
@@ -305,11 +306,32 @@ nav.mantra-toc {
     border-bottom: 2px solid #ecf0f1;
 }
 
+.panel-back-to-top {
+    margin-top: 1.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid #ecf0f1;
+    text-align: left;
+}
+
+.panel-back-to-top a {
+    color: #3498db;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: color 0.3s ease;
+    display: inline-block;
+}
+
+.panel-back-to-top a:hover {
+    color: #2c3e50;
+    text-decoration: underline;
+}
+
+/* Mantra-specific content styles */
 .mantra-section {
     margin-bottom: 1.25rem;
 }
 
-.mantra-section h3 {
+.mantra-content .mantra-section h3 {
     font-size: 1.2rem;
     font-weight: 500;
     /* color: #5d7a99; */
@@ -450,25 +472,6 @@ nav.mantra-toc {
     text-decoration: underline;
 }
 
-.mantra-back-to-top {
-    margin-top: 1.5rem;
-    padding-top: 1.5rem;
-    border-top: 1px solid #ecf0f1;
-    text-align: left;
-}
-
-.mantra-back-to-top a {
-    color: #3498db;
-    text-decoration: none;
-    font-size: 0.9rem;
-    transition: color 0.3s ease;
-    display: inline-block;
-}
-
-.mantra-back-to-top a:hover {
-    color: #2c3e50;
-    text-decoration: underline;
-}
 
 /* Pull Quote */
 .pull-quote {
@@ -581,7 +584,7 @@ footer p {
         padding: 0 1.5rem;
     }
 
-    .mantra {
+    .panel {
         padding: 1.5rem;
     }
 
