@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import LinkItem from '../components/LinkItem.astro';
 ---
 
 <BaseLayout title="Resources - Visions on the Path">
@@ -28,8 +29,35 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         <article class="mantra" id="my-links">
             <h2 class="mantra-title">My Links</h2>
             <div class="mantra-section">
-                <div class="resource-list">
-                    <!-- Add your links here -->
+                <div class="link-list">
+                    <LinkItem
+                        href="https://www.youtube.com/@VisionsOnThePath"
+                        iconSrc="/images/youtube-icon.svg"
+                        iconAlt="YouTube"
+                        title="Videos: Visions on the Path"
+                        description="YouTube channel with videos related to Kriya Yoga, meditation, and spirituality"
+                    />
+                    <LinkItem
+                        href="https://visionsonthepathblog.substack.com"
+                        iconSrc="/images/votp-substack-logo.png"
+                        iconAlt="Visions on the Path Blog Logo"
+                        title="Blog: Visions on the Path"
+                        description="Writings about spirituality, my spiritual journey, and thoughts"
+                    />
+                    <LinkItem
+                        href="https://memoriesofhome.substack.com/"
+                        iconSrc="/images/memories-of-home-logo.webp"
+                        iconAlt="Memories of Home Logo"
+                        title="Blog: Memories of Home"
+                        description="Blog posts intended to remind people of the the love and beauty in our heart and the world."
+                    />
+                    <LinkItem
+                        href="https://mindfulai.substack.com/"
+                        iconSrc="/images/mindful-ai-logo.png"
+                        iconAlt="Mindful AI Logo"
+                        title="Blog: Mindful AI"
+                        description="Examples of using GenAI for spiritual pursuits and psychological wellbeing."
+                    />
                 </div>
             </div>
             <div class="mantra-back-to-top">

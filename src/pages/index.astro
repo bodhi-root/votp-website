@@ -1,6 +1,7 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Card from '../components/Card.astro';
+import LinkItem from '../components/LinkItem.astro';
 ---
 
 <BaseLayout title="Home - Visions on the Path">
@@ -58,51 +59,34 @@ import Card from '../components/Card.astro';
         <div class="featured-content">
             <h2>Links to My Content</h2>
             <div class="link-list">
-                <a href="https://www.youtube.com/@VisionsOnThePath" class="link-item">
-                    <div class="link-icon">
-                        <img src="/images/youtube-icon.svg" alt="YouTube" />
-                    </div>
-                    <div class="link-content">
-                        <h3>Videos: Visions on the Path</h3>
-                        <p>YouTube channel with videos related to Kriya Yoga, meditation, and spirituality</p>
-                    </div>
-                </a>
-                <a href="https://visionsonthepathblog.substack.com" class="link-item">
-                    <div class="link-icon">
-                        <img src="/images/votp-substack-logo.png" alt="Visions on the Path Blog Logo" />
-                    </div>
-                    <div class="link-content">
-                        <h3>Blog: Visions on the Path</h3>
-                        <p>Writings about spirituality, my spiritual journey, and thoughts</p>
-                    </div>
-                </a>
-                <a href="https://memoriesofhome.substack.com/" class="link-item">
-                    <div class="link-icon">
-                        <img src="/images/memories-of-home-logo.webp" alt="Memories of Home Logo" />
-                    </div>
-                    <div class="link-content">
-                        <h3>Blog: Memories of Home</h3>
-                        <p>Blog posts intended to remind people of the the love and beauty in our heart and the world.</p>
-                    </div>
-                </a>
-                <a href="https://mindfulai.substack.com/" class="link-item">
-                    <div class="link-icon">
-                        <img src="/images/mindful-ai-logo.png" alt="Mindful AI Logo" />
-                    </div>
-                    <div class="link-content">
-                        <h3>Blog: Mindful AI</h3>
-                        <p>Examples of using GenAI for spiritual pursuits and psychological wellbeing.</p>
-                    </div>
-                </a>
-                <!--
-                <a href="https://www.tiktok.com/@visionsonthepath" class="link-item">
-                    <div class="link-icon">🎵</div>
-                    <div class="link-content">
-                        <h3>TikTok</h3>
-                        <p>Short-form spiritual content and reflections</p>
-                    </div>
-                </a>
-                 -->
+                <LinkItem
+                    href="https://www.youtube.com/@VisionsOnThePath"
+                    iconSrc="/images/youtube-icon.svg"
+                    iconAlt="YouTube"
+                    title="Videos: Visions on the Path"
+                    description="YouTube channel with videos related to Kriya Yoga, meditation, and spirituality"
+                />
+                <LinkItem
+                    href="https://visionsonthepathblog.substack.com"
+                    iconSrc="/images/votp-substack-logo.png"
+                    iconAlt="Visions on the Path Blog Logo"
+                    title="Blog: Visions on the Path"
+                    description="Writings about spirituality, my spiritual journey, and thoughts"
+                />
+                <LinkItem
+                    href="https://memoriesofhome.substack.com/"
+                    iconSrc="/images/memories-of-home-logo.webp"
+                    iconAlt="Memories of Home Logo"
+                    title="Blog: Memories of Home"
+                    description="Blog posts intended to remind people of the the love and beauty in our heart and the world."
+                />
+                <LinkItem
+                    href="https://mindfulai.substack.com/"
+                    iconSrc="/images/mindful-ai-logo.png"
+                    iconAlt="Mindful AI Logo"
+                    title="Blog: Mindful AI"
+                    description="Examples of using GenAI for spiritual pursuits and psychological wellbeing."
+                />
             </div>
         </div>
     </section>
