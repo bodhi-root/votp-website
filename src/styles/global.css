@@ -624,21 +624,21 @@ footer p {
     }
 }
 
-.about-content {
+.page-content {
     max-width: 1400px;
     margin: 0 auto 4rem auto;
     padding: 0 2rem;
 }
 
-.about-text {
+.page-text {
     max-width: 900px;
 }
 
-.about-text h2 {
+.page-text h2 {
     margin-bottom: 1rem;
 }
 
-.about-text p {
+.page-text p {
     font-size: 1.1rem;
     color: #5a6c7d;
     line-height: 1.7;
@@ -648,24 +648,24 @@ footer p {
     margin-bottom: 1rem;
 }
 
-.about-text a {
+.page-text a {
     color: #3498db;
     text-decoration: none;
     transition: color 0.3s ease;
 }
 
-.about-text a:hover {
+.page-text a:hover {
     color: #2c3e50;
     text-decoration: underline;
 }
 
 @media (max-width: 768px) {
-    .about-content {
+    .page-content {
         padding: 0 1.5rem;
         margin: 1.5rem auto 4rem auto;
     }
 
-    .about-text p {
+    .page-text p {
         font-size: 1rem;
     }
 }

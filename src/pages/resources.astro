@@ -3,65 +3,87 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 ---
 
 <BaseLayout title="Resources - Visions on the Path">
-    <section class="hero">
+    <section class="hero" id="top">
         <div class="hero-content">
             <h1>Resources</h1>
-            <p>Curated guides, reading lists, and links to support your journey along the Kriya Yoga path.</p>
+            <p>Useful books, websites, and other resources</p>
         </div>
     </section>
 
-    <section class="content-grid">
-        <div class="card">
-            <h2>Essential Texts</h2>
-            <p>The Yoga Sutras of Patanjali, Bhagavad Gita, and Autobiography of a Yogi - foundational readings for understanding Kriya Yoga.</p>
-            <p class="card-meta">Recommended translations included</p>
-        </div>
+    <div class="mantras-container">
 
-        <div class="card">
-            <h2>Practice Guides</h2>
-            <p>Step-by-step instructions for breath work, meditation postures, and establishing a daily practice routine.</p>
-            <p class="card-meta">Beginner to advanced levels</p>
-        </div>
+        <section class="mantra-toc-section">
+            <!-- <h2>Table of Contents</h2> -->
+            <nav class="mantra-toc">
+                <ul>
+                    <li><a href="#my-links">My Links</a></li>
+                    <li><a href="#kriya-yoga-online">Kriya Yoga Online</a></li>
+                    <li><a href="#yoga">Yoga</a></li>
+                    <li><a href="#channeled-entities">Channeled Entities</a></li>
+                    <li><a href="#sanskrit">Sanskrit</a></li>
+                </ul>
+            </nav>
+        </section>
 
-        <div class="card">
-            <h2>Audio & Video</h2>
-            <p>Guided meditations, mantra chanting demonstrations, and talks on yogic philosophy and technique.</p>
-            <p class="card-meta">Free and accessible</p>
-        </div>
-
-        <div class="card">
-            <h2>Teachers & Lineage</h2>
-            <p>Links to respected teachers and organizations preserving the authentic Kriya Yoga tradition.</p>
-            <p class="card-meta">Vetted sources only</p>
-        </div>
-    </section>
-
-    <section class="featured">
-        <div class="featured-content">
-            <h2>Recommended Books</h2>
-            <div class="link-list">
-                <div class="link-item">
-                    <div class="link-icon">📖</div>
-                    <div class="link-content">
-                        <h3>The Yoga Sutras of Patanjali</h3>
-                        <p>Translation by Sri Swami Satchidananda - Clear, accessible interpretation</p>
-                    </div>
-                </div>
-                <div class="link-item">
-                    <div class="link-icon">📖</div>
-                    <div class="link-content">
-                        <h3>Autobiography of a Yogi</h3>
-                        <p>Paramahansa Yogananda - Classic introduction to Kriya Yoga</p>
-                    </div>
-                </div>
-                <div class="link-item">
-                    <div class="link-icon">📖</div>
-                    <div class="link-content">
-                        <h3>The Bhagavad Gita</h3>
-                        <p>Translation by Eknath Easwaran - Practical wisdom for daily life</p>
-                    </div>
+        <article class="mantra" id="my-links">
+            <h2 class="mantra-title">My Links</h2>
+            <div class="mantra-section">
+                <div class="resource-list">
+                    <!-- Add your links here -->
                 </div>
             </div>
-        </div>
-    </section>
+            <div class="mantra-back-to-top">
+                <a href="#top">↑ Back to top</a>
+            </div>
+        </article>
+
+        <article class="mantra" id="kriya-yoga-online">
+            <h2 class="mantra-title">Kriya Yoga Online</h2>
+            <div class="mantra-section">
+                <div class="resource-list">
+                    <!-- Add Kriya Yoga Online resources here -->
+                </div>
+            </div>
+            <div class="mantra-back-to-top">
+                <a href="#top">↑ Back to top</a>
+            </div>
+        </article>
+
+        <article class="mantra" id="yoga">
+            <h2 class="mantra-title">Yoga</h2>
+            <div class="mantra-section">
+                <div class="resource-list">
+                    <!-- Add Yoga resources here -->
+                </div>
+            </div>
+            <div class="mantra-back-to-top">
+                <a href="#top">↑ Back to top</a>
+            </div>
+        </article>
+
+        <article class="mantra" id="channeled-entities">
+            <h2 class="mantra-title">Channeled Entities</h2>
+            <div class="mantra-section">
+                <div class="resource-list">
+                    <!-- Add Channeled Entities resources here -->
+                </div>
+            </div>
+            <div class="mantra-back-to-top">
+                <a href="#top">↑ Back to top</a>
+            </div>
+        </article>
+
+        <article class="mantra" id="sanskrit">
+            <h2 class="mantra-title">Sanskrit</h2>
+            <div class="mantra-section">
+                <div class="resource-list">
+                    <!-- Add Sanskrit resources here -->
+                </div>
+            </div>
+            <div class="mantra-back-to-top">
+                <a href="#top">↑ Back to top</a>
+            </div>
+        </article>
+
+    </div>
 </BaseLayout>
