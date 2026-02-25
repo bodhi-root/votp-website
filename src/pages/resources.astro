@@ -20,7 +20,7 @@ import Panel from '../components/Panel.astro';
                 <ul>
                     <li><a href="#my-links">My Links</a></li>
                     <li><a href="#kriya-yoga-online">Kriya Yoga Online</a></li>
-                    <li><a href="#yoga">Yoga</a></li>
+                    <li><a href="#yoga">Yoga (Other)</a></li>
                     <li><a href="#channeled-entities">Channeled Entities</a></li>
                     <li><a href="#sanskrit">Sanskrit</a></li>
                 </ul>
@@ -28,59 +28,176 @@ import Panel from '../components/Panel.astro';
         </section>
 
         <Panel id="my-links" title="My Links">
+            <p>
+                Here's where I post video, audio, and writings:
+            </p>
             <div class="link-list">
                 <LinkItem
                     href="https://www.youtube.com/@VisionsOnThePath"
                     iconSrc="/images/youtube-icon.svg"
                     iconAlt="YouTube"
-                    title="Videos: Visions on the Path"
-                    description="YouTube channel with videos related to Kriya Yoga, meditation, and spirituality"
-                />
+                    title="YouTube: Visions on the Path">
+                    <p>YouTube channel with videos related to Kriya Yoga, meditation, and spirituality</p>
+                </LinkItem>
                 <LinkItem
                     href="https://visionsonthepathblog.substack.com"
                     iconSrc="/images/votp-substack-logo.png"
                     iconAlt="Visions on the Path Blog Logo"
-                    title="Blog: Visions on the Path"
-                    description="Writings about spirituality, my spiritual journey, and thoughts"
-                />
+                    title="Blog: Visions on the Path">
+                    <p>Writings about spirituality, my spiritual journey, and thoughts</p>
+                </LinkItem>
                 <LinkItem
                     href="https://memoriesofhome.substack.com/"
                     iconSrc="/images/memories-of-home-logo.webp"
                     iconAlt="Memories of Home Logo"
-                    title="Blog: Memories of Home"
-                    description="Blog posts intended to remind people of the the love and beauty in our heart and the world."
-                />
+                    title="Blog: Memories of Home">
+                    <p>Blog posts intended to remind people of the the love and beauty in our heart and the world.</p>
+                </LinkItem>
                 <LinkItem
                     href="https://mindfulai.substack.com/"
                     iconSrc="/images/mindful-ai-logo.png"
                     iconAlt="Mindful AI Logo"
-                    title="Blog: Mindful AI"
-                    description="Examples of using GenAI for spiritual pursuits and psychological wellbeing."
-                />
+                    title="Blog: Mindful AI">
+                    <p>Examples of using GenAI for spiritual pursuits and psychological wellbeing.</p>
+                </LinkItem>
             </div>
         </Panel>
 
-        <Panel id="kriya-yoga-online" title="Kriya Yoga Online">
-            <div class="resource-list">
-                <!-- Add Kriya Yoga Online resources here -->
+        <Panel id="kriya-yoga-online" title="Kriya Yoga Online (Ryan Kurczak)">
+            <p>
+                Ryan Kurczak is a Kriya Yoga teacher with over 20 years experience. His online classes, apprenticeship program, and in-person retreats are absolutely wonderful. Here are some of his links:
+            </p>
+            <div class="link-list">
+                <LinkItem
+                    href="https://kriyayogaonline.com/"
+                    title="kriyayogaonline.com"
+                    iconSrc="/images/resources/kriyayogaonline-logo.png">
+                    <p>Ryan's Kriya Yoga homepage. Online classes and meditation retreats.</p>
+                </LinkItem>
+                <LinkItem
+                    href="https://www.patreon.com/cw/KriyaYoga"
+                    title="Kriya Yoga Patreon"
+                    iconSrc="/images/resources/kriyayogaonline-logo.png">
+                    <p>Ryan's Patreon to support his teaching and get early/exclusive content.</p>
+                </LinkItem>
+                <LinkItem
+                    href="https://www.youtube.com/@KriyaYogaOnline"
+                    iconSrc="/images/youtube-icon.svg"
+                    iconAlt="YouTube"
+                    title="YouTube: Kriya Yoga Online">
+                    <p>YouTube channel with hundreds of videos.</p>
+                </LinkItem>   
             </div>
+            <div>
+                <ul>
+                    <li>
+                        <a href="https://www.youtube.com/playlist?list=PLNm7Qr3wNOAG8DBzwKRAlY5hDe-a7dSY8">YouTube Playlist: Kriya Yoga Pranayama Techniques Taught During Initiation</a> - If you'd like to learn the basic Kriya Yoga techniques without secrecy, here you go!
+                    </li>
+                </ul>
+            </div>
+            <!--TODO: books -->
         </Panel>
 
-        <Panel id="yoga" title="Yoga">
-            <div class="resource-list">
-                <!-- Add Yoga resources here -->
+        <Panel id="yoga" title="Yoga (Other)">
+            <p>
+                If you are learning Kriya Yoga from Ryan, he recommends sticking to his own books and teachings for the first couple of years. Expanding too far into different areas may not be helpful. However, I have found the following teachers and resources to be helpful to me.
+            </p>
+            <ul>
+                <li><b>Ram Dass</b> - Ram Dass is a beautiful soul. I enjoy going to YouTube, searching "Ram Dass", and playing the first video that sounds interesting. He always puts a smile on my face and makes everything OK.</li>
+                <li><b>Hari Dass</b> - A silent yogi who instructed Ram Dass when he was in India with Maharaji</li>
+                <li><b>Ramana Maharshi</b> - An enlightened guru from India, endorsed by Ryan Kurczak and Roy Eugene Davis</li>
+                <li><b>Paul Brunton</b> - An intellectual, philosophical yogi and student of Ramana Maharshi. His book "A Search in Secret" India is great. His others are a bit wordy, but good.</li>
+                <li><b>Sri M</b> - A knowledgeable yogic teacher. He is a bit controversial due to some "far out" claims, but I find many of his teachings helpful.</li>
+            </ul>
+            <div class="link-list">
+                <LinkItem
+                    href="https://www.youtube.com/@BabaRamDassChannel"
+                    iconSrc="/images/youtube-icon.svg"
+                    iconAlt="YouTube"
+                    title="YouTube: Baba Ram Dass">
+                    <p>Great collection of Ram Dass lectures.</p>
+                </LinkItem>
+                <LinkItem
+                    title="Yoga Sutras (Hari Dass)"
+                    href="https://www.amazon.com/Yoga-Sutras-Patanjali-Study-Samadhi/dp/0918100208"
+                    iconSrc="/images/resources/yoga-sutras-hari-dass-book.jpg">
+                    <p>Amazing translation and commentary on the Yoga Sutras by Baba Hari Dass (Ram Dass's teacher)</p>
+                </LinkItem>
+                <LinkItem
+                    title="Be As You Are (Ramana Maharshi)"
+                    href="https://www.amazon.com/Be-As-You-Are-Teachings-ebook/dp/B002RI9JS2"
+                    iconSrc="/images/resources/be-as-you-are-book.jpg">
+                    <p>The best book I've found on Ramana Maharshi's teachings.</p>
+                </LinkItem>
+                <LinkItem
+                    title="A Search in Secret India"
+                    href="https://www.amazon.com/Search-Secret-India-Unabridged-ebook/dp/B07X2CB25Y"
+                    iconSrc="/images/resources/search-in-secret-india-book.jpg">
+                    <p>If you've ever wondered what it would be like to travel to India in search of a guru, this book will take you there.</p>
+                </LinkItem>
+                <LinkItem
+                    title="Sri M Autobiography"
+                    href="https://www.amazon.com/Apprenticed-Himalayan-Master-Yogis-Autobiography-ebook/dp/B007F2I3F0"
+                    iconSrc="/images/resources/apprenticed-to-a-himalayan-master-book.webp">
+                    <p>This was the book that first got me interested in Kriya Yoga. I'm not sure what I think of it now, but it's still worth mentioning.</p>
+                </LinkItem>
             </div>
         </Panel>
 
         <Panel id="channeled-entities" title="Channeled Entities">
-            <div class="resource-list">
-                <!-- Add Channeled Entities resources here -->
+            <p>
+                There are several "channeled" beings or entities that have interesting perspectives on life. Ryan Kurczak warns us: "don't trust everything someone says just because they don't have a body." So take this with a grain of salt (a very large grain of salt). The entities I find interesting are:
+            </p>
+            <ul>
+                <li><b>Emmanuel (Channeled by Pat Rodegast)</b> - Ram Dass referred to Emmanuel as one of his best friends. His/her view on life is that everything is love and unity and that we are all returning home together. Emmauel's Book might be my favorite book of all time. It is beautiful and inspiring.
+                </li>
+
+                <li><b>Seth (Channeled by Jane Roberts)</b> - Seth's teachings focus on the nature of reality, consciousness, and the power of beliefs in shaping our experiences.
+                </li>
+
+                <li><b>Ra (Channeled by Carla Rueckert)</b> - Ra is the source of the "Law of One" material that was revealed over the course of 100 channeling sessions. The content is pretty "out there", but there are certain concepts that I have found invaluable.
+                </li>
+
+                <li><b>Bashar (Channeled by Darryl Anka)</b> - Bashar's teachings are similar to Seth. He explains how each person creates their own reality. I'm not sure what I think of him, but he can be interesting at times.
+                </li>
+            </ul>
+            <div class="link-list">
+                <LinkItem
+                    href="https://www.amazon.com/Emmanuels-Book-Manual-Living-Comfortably/dp/0553343874"
+                    iconSrc="/images/resources/emmanuels-book.webp"
+                    title="Emmanuel's Book">
+                    <p>An amazing book that describes the universe as unity and love.</p>
+                </LinkItem>
+                <LinkItem
+                    href="https://www.lawofone.info/"
+                    title="Law of One">
+                    <p>The Law of One material online (and free).</p>
+                </LinkItem>
+                <LinkItem
+                    title="Seth Speaks"    
+                    href="https://www.amazon.com/Seth-Speaks-Eternal-Validity-Soul-ebook/dp/B007QQU9DO"
+                    iconSrc="/images/resources/seth-speaks-book.jpg">
+                    <p>Seth's first book. Interesting (but a little bit "out there").</p>
+                </LinkItem>
             </div>
         </Panel>
 
         <Panel id="sanskrit" title="Sanskrit">
-            <div class="resource-list">
-                <!-- Add Sanskrit resources here -->
+            <p>
+                At some point, you might want to learn how to pronounce Sanskrit words. The <a href="https://www.americansanskrit.com/">American Sanskrit Institute</a> has in-depth, high-quality materials to help you learn Sanskrit. It is run by Vyaas Houston (whom Ryan Kurczak considers to be a trustworthy yogic teacher as well as a Sanskrit scholar).
+            </p>
+            <p>
+                I've also found that Duolingo's Hindi lessons are helpful for learning how to read Devanagari script and pronounce Hindi/Sanskrit words. You won't be learning ancient Sanskrit words, but the Devanagari letters and sounds are essentially the same in both ancient Sanskrit and modern Hindi.
+            </p>
+            <ul>
+                <li><a href="https://www.bolochant.com/blog/sanskrit-pronunciation/">Sanskrit Pronunciation (Bolo!)</a> - Detailed pronunciation guide from a group that sings kirtan.</li>
+            </ul>
+            <div class="link-list">
+                <LinkItem
+                    title="American Sanskrit Institute"
+                    href="https://www.americansanskrit.com/">
+                    <p>Books and audio to help you learn ancient Sanskrit in a yogic context.</p>
+                </LinkItem>
             </div>
         </Panel>
 

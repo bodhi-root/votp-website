@@ -1,21 +1,20 @@
-## Home Page
+## General
 
-Replace main image (lotus flower?)
-CONSIDER: replace top-left image with zen circle.
-Replace images in bottom links with blog graphics.
+Modify LinkItem so image is aligned to top-left (with padding?)
 
-## Mantras
+Remove underlines from LinkItems on resources page (make them like home page)
 
-Add logo at top-right of hero (om symbol or design?)
+Commit to GitHub
 
-Add sanskrit pronunciation page somewhere
-(link to other?)
+Get GitHub pages to build automatically
+
+Link up votp domain to GitHub pages
+
+## Sanskrit
+
+Write an article about Sanskrit and link to it. (on resources and mantras?)
+- include Hari Dass's transcription
 
 ## Before Committing
 
 CONSIDER: Squash down all the commits so we don't have a big ugly history on main
-
-## Resurce Page
-
-Build this page. (We can put the website up without it though)
-

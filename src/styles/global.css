@@ -197,6 +197,12 @@ nav a:hover {
 .link-item:hover {
     box-shadow: 0 4px 12px rgba(52, 152, 219, 0.15);
     transform: translateX(4px);
+    text-decoration: none;
+}
+
+.link-item h3,
+.link-item .link-description {
+    text-decoration: none;
 }
 
 .link-icon {
@@ -224,10 +230,24 @@ nav a:hover {
     margin-bottom: 0.25rem;
 }
 
-.link-content p {
+.link-description {
     font-size: 0.9rem;
     color: #5a6c7d;
+}
+
+.link-description p {
     margin: 0;
+}
+
+.link-description a {
+    color: #3498db;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.link-description a:hover {
+    color: #2c3e50;
+    text-decoration: underline;
 }
 
 .featured-grid {
@@ -304,6 +324,38 @@ nav.mantra-toc {
     margin-bottom: 2rem;
     padding-bottom: 1rem;
     border-bottom: 2px solid #ecf0f1;
+}
+
+.panel p {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: #5a6c7d;
+    font-family: 'Trebuchet MS', sans-serif;
+    margin-bottom: 1rem;
+}
+
+.panel ul {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: #5a6c7d;
+    font-family: 'Trebuchet MS', sans-serif;
+    margin-bottom: 1rem;
+    padding-left: 1.5rem;
+}
+
+.panel li {
+    margin-bottom: 0.5rem;
+}
+
+.panel a {
+    color: #3498db;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.panel a:hover {
+    color: #2c3e50;
+    text-decoration: underline;
 }
 
 .panel-back-to-top {

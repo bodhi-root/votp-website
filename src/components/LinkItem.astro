@@ -1,21 +1,29 @@
 ---
 interface Props {
-    href: string;
-    iconSrc: string;
-    iconAlt: string;
+    href?: string;
+    iconSrc?: string;
+    iconAlt?: string;
     title: string;
-    description: string;
 }
 
-const { href, iconSrc, iconAlt, title, description } = Astro.props;
+const {
+    href,
+    iconSrc = "/images/lotus-outline.png",
+    iconAlt = "Link",
+    title
+} = Astro.props;
+
+const Element = href ? 'a' : 'div';
 ---
 
-<a href={href} class="link-item">
+<Element href={href} class="link-item">
     <div class="link-icon">
-        <img src={iconSrc} alt={iconAlt} />
+        {iconSrc && <img src={iconSrc} alt={iconAlt} />}
     </div>
     <div class="link-content">
         <h3>{title}</h3>
-        <p>{description}</p>
+        <div class="link-description">
+            <slot />
+        </div>
     </div>
-</a>
+</Element>
