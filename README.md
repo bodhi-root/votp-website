@@ -1,6 +1,6 @@
 # Visions on the Path
 
-**Live Site:** [https://bodhi-root.github.io/votp-website](https://bodhi-root.github.io/votp-website)
+**Live Site:** [https://visionsonthepath.com](https://visionsonthepath.com)
 
 A personal website dedicated to sharing insights, mantras, and resources related to Kriya Yoga, meditation, and spiritual practice.
 
