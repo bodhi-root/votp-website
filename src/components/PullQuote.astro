@@ -1,0 +1,19 @@
+---
+interface Props {
+    imageSrc?: string;
+    imageAlt?: string;
+}
+
+const { imageSrc, imageAlt } = Astro.props;
+---
+
+<div class="pull-quote">
+    {imageSrc && (
+        <div class="pull-quote-image">
+            <img src={imageSrc} alt={imageAlt || "Quote image"} />
+        </div>
+    )}
+    <div class="pull-quote-content">
+        <slot />
+    </div>
+</div>

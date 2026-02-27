@@ -1,0 +1,42 @@
+---
+interface Props {
+    src: string;
+    alt: string;
+    caption?: string;
+}
+
+const { src, alt, caption } = Astro.props;
+---
+
+<figure class="image-with-caption">
+    <img src={src} alt={alt} />
+    {caption && <figcaption>{caption}</figcaption>}
+</figure>
+
+<style>
+    .image-with-caption {
+        margin: 1rem 0;
+        padding: 0 2rem;
+    }
+
+    .image-with-caption img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+    }
+
+    .image-with-caption figcaption {
+        margin-top: 0.5rem;
+        font-size: 0.9rem;
+        color: #5a6c7d;
+        font-style: italic;
+        text-align: center;
+        font-family: 'Trebuchet MS', sans-serif;
+    }
+
+    @media (max-width: 768px) {
+        .image-with-caption {
+            padding: 0;
+        }
+    }
+</style>

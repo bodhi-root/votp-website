@@ -1,0 +1,342 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import yogaSutras from '../data/yoga_sutras.json';
+---
+
+<BaseLayout title="Daily Verse - Visions on the Path">
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Daily Verse</h1>
+            <p>Random sutra from the Yoga Sutras</p>
+        </div>
+    </section>
+
+    <section class="verse-of-the-day">
+        <div class="verse-container">
+            <!-- Verse Display with Navigation -->
+            <div class="verse-content-wrapper">
+                <!-- Left Arrow -->
+                <button class="arrow-btn prev-btn" aria-label="Previous verse">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M15 18l-6-6 6-6"/>
+                    </svg>
+                </button>
+
+                <!-- Verse Content -->
+                <div class="verse-content">
+                    <p class="verse-date" id="verse-date">Loading...</p>
+                    <h2 class="verse-title" id="verse-title">Yoga Sutra</h2>
+
+                    <p class="verse-devanagari" id="verse-devanagari"></p>
+
+                    <p class="verse-iast" id="verse-iast"></p>
+
+                    <p class="verse-english" id="verse-english"></p>
+                </div>
+
+                <!-- Right Arrow -->
+                <button class="arrow-btn next-btn" aria-label="Next verse">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M9 18l6-6-6-6"/>
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Random Verse Button -->
+            <div class="random-verse-section">
+                <button class="random-verse-btn">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M21.5 2v6h-6M2.5 22v-6h6M2 11.5a10 10 0 0 1 18.8-4.3M22 12.5a10 10 0 0 1-18.8 4.2"/>
+                    </svg>
+                    Random Verse
+                </button>
+            </div>
+        </div>
+    </section>
+</BaseLayout>
+
+<style>
+    .verse-of-the-day {
+        background: white;
+        padding: 2rem 2rem 4rem;
+        min-height: 60vh;
+    }
+
+    .verse-container {
+        max-width: 900px;
+        margin: 0 auto;
+    }
+
+    /* Verse Content Wrapper with Arrow Navigation */
+    .verse-content-wrapper {
+        display: flex;
+        align-items: flex-start;
+        gap: 1.5rem;
+        margin-bottom: 2rem;
+    }
+
+    .arrow-btn {
+        flex-shrink: 0;
+        width: 48px;
+        height: 48px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: white;
+        border: 2px solid #CBD5E0;
+        border-radius: 50%;
+        cursor: pointer;
+        transition: all 0.2s ease;
+        color: #4A5568;
+        margin-top: 4rem;
+        position: sticky;
+        top: 2rem;
+    }
+
+    .arrow-btn:hover {
+        background: #F7FAFC;
+        border-color: #4A5568;
+        color: #2D3748;
+    }
+
+    .arrow-btn:active {
+        transform: scale(0.95);
+    }
+
+    .arrow-btn svg {
+        width: 24px;
+        height: 24px;
+    }
+
+    /* Verse Content */
+    .verse-content {
+        flex: 1;
+        text-align: center;
+        padding: 3rem 2rem;
+        border-radius: 12px;
+        background: #FAFAFA;
+    }
+
+    .verse-date {
+        font-size: 0.875rem;
+        color: #718096;
+        font-weight: 500;
+        margin-bottom: 0.5rem;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+    }
+
+    .verse-title {
+        color: #2D3748;
+        font-size: 1.5rem;
+        margin-bottom: 2rem;
+        font-weight: 600;
+    }
+
+    .verse-devanagari {
+        font-size: 2rem;
+        margin-bottom: 1.5rem;
+        color: #1A202C;
+        line-height: 1.6;
+    }
+
+    .verse-iast {
+        font-size: 1.5rem;
+        font-style: italic;
+        color: #4A5568;
+        margin-bottom: 1.5rem;
+    }
+
+    .verse-english {
+        font-size: 1.125rem;
+        color: #2D3748;
+        line-height: 1.8;
+        max-width: 600px;
+        margin: 0 auto;
+    }
+
+    /* Random Verse Section */
+    .random-verse-section {
+        display: flex;
+        justify-content: center;
+        margin-top: 2rem;
+    }
+
+    .random-verse-btn {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        padding: 0.75rem 1.5rem;
+        background: white;
+        border: 2px solid #CBD5E0;
+        border-radius: 8px;
+        color: #4A5568;
+        font-size: 0.95rem;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.2s ease;
+    }
+
+    .random-verse-btn:hover {
+        background: #F7FAFC;
+        border-color: #4A5568;
+        color: #2D3748;
+    }
+
+    .random-verse-btn:active {
+        transform: scale(0.98);
+    }
+
+    .random-verse-btn svg {
+        width: 18px;
+        height: 18px;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+        .verse-of-the-day {
+            padding: 2rem 1rem;
+        }
+
+        .verse-content-wrapper {
+            gap: 0.5rem;
+        }
+
+        .arrow-btn {
+            width: 40px;
+            height: 40px;
+        }
+
+        .arrow-btn svg {
+            width: 20px;
+            height: 20px;
+        }
+
+        .verse-content {
+            padding: 2rem 1rem;
+        }
+
+        .verse-devanagari {
+            font-size: 1.5rem;
+        }
+
+        .verse-iast {
+            font-size: 1.25rem;
+        }
+
+        .verse-english {
+            font-size: 1rem;
+        }
+
+        .random-verse-btn {
+            width: 100%;
+            max-width: 300px;
+            justify-content: center;
+        }
+    }
+</style>
+
+<script define:vars={{ yogaSutras }}>
+    // Constants
+    const START_DATE = new Date('2026-01-01');
+    const TOTAL_VERSES = yogaSutras.length;
+
+    // Get current date from URL or use today
+    function getCurrentDate() {
+        const urlParams = new URLSearchParams(window.location.search);
+        const dateParam = urlParams.get('date');
+        if (dateParam) {
+            const date = new Date(dateParam + 'T00:00:00');
+            if (!isNaN(date.getTime())) {
+                return date;
+            }
+        }
+        return new Date();
+    }
+
+    // Calculate verse index based on date
+    function getVerseForDate(date) {
+        const diffTime = date.getTime() - START_DATE.getTime();
+        const daysSinceStart = Math.floor(diffTime / (1000 * 60 * 60 * 24));
+        const verseIndex = ((daysSinceStart % TOTAL_VERSES) + TOTAL_VERSES) % TOTAL_VERSES;
+        return yogaSutras[verseIndex];
+    }
+
+    // Format date for display
+    function formatDate(date) {
+        return date.toLocaleDateString('en-US', {
+            year: 'numeric',
+            month: 'long',
+            day: 'numeric'
+        });
+    }
+
+    // Update the page content
+    function updateVerse(date) {
+        const verse = getVerseForDate(date);
+
+        document.getElementById('verse-date').textContent = formatDate(date);
+        document.getElementById('verse-title').textContent = `Yoga Sutra ${verse.pada}.${verse.sutra}`;
+        document.getElementById('verse-devanagari').textContent = verse.devanagari;
+        document.getElementById('verse-iast').textContent = verse.iast;
+        document.getElementById('verse-english').textContent = verse.english;
+
+        // Update URL without reloading
+        const dateString = date.toISOString().split('T')[0];
+        const newUrl = `${window.location.pathname}?date=${dateString}`;
+        window.history.pushState({ date: dateString }, '', newUrl);
+    }
+
+    // Initialize page
+    document.addEventListener('DOMContentLoaded', () => {
+        const prevBtn = document.querySelector('.prev-btn');
+        const nextBtn = document.querySelector('.next-btn');
+        const randomBtn = document.querySelector('.random-verse-btn');
+
+        // Load initial verse
+        updateVerse(getCurrentDate());
+
+        // Handle browser back/forward buttons
+        window.addEventListener('popstate', (event) => {
+            const date = event.state?.date ? new Date(event.state.date + 'T00:00:00') : new Date();
+            updateVerse(date);
+        });
+
+        // Previous day
+        prevBtn?.addEventListener('click', () => {
+            const currentDate = getCurrentDate();
+            const prevDate = new Date(currentDate);
+            prevDate.setDate(prevDate.getDate() - 1);
+            updateVerse(prevDate);
+        });
+
+        // Next day
+        nextBtn?.addEventListener('click', () => {
+            const currentDate = getCurrentDate();
+            const nextDate = new Date(currentDate);
+            nextDate.setDate(nextDate.getDate() + 1);
+            updateVerse(nextDate);
+        });
+
+        // Random verse - pick a random date between today and 194 days ago
+        randomBtn?.addEventListener('click', () => {
+            const today = new Date();
+            const currentDate = getCurrentDate();
+            const currentDateString = currentDate.toISOString().split('T')[0];
+
+            let randomDate;
+            let randomDateString;
+
+            // Keep generating random dates until we get one different from current
+            do {
+                // Random number of days ago (0 to 194)
+                const daysAgo = Math.floor(Math.random() * 195);
+                randomDate = new Date(today);
+                randomDate.setDate(randomDate.getDate() - daysAgo);
+                randomDateString = randomDate.toISOString().split('T')[0];
+            } while (randomDateString === currentDateString);
+
+            updateVerse(randomDate);
+        });
+    });
+</script>

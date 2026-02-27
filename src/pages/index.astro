@@ -1,16 +1,20 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Card from '../components/Card.astro';
+import LinkItem from '../components/LinkItem.astro';
 ---
 
 <BaseLayout title="Home - Visions on the Path">
     <section class="hero">
         <div class="hero-content">
-            <h1>Kriya Yoga for a Quiet Mind</h1>
-            <p>A modern, uncluttered space to explore breath, mantra, and meditation. Move gently, notice deeply, and walk the path with steadiness and clarity.</p>
+            <h1>Home Page of a Kriya Yoga Student</h1>
+            <p>Collection of spiritual content and links.</p>
+            <p>Peace, Love, and Best Wishes to all.</p>
+            <p>Namaste.</p>
         </div>
         <div class="hero-visual">
-            <svg width="280" height="280" viewBox="0 0 280 280" xmlns="http://www.w3.org/2000/svg">
+            <img src="/images/lotus-flower-homepage.png" alt="Enso Circle" width="280" height="280" />
+            <!-- <svg width="280" height="280" viewBox="0 0 280 280" xmlns="http://www.w3.org/2000/svg">
                 <defs>
                     <linearGradient id="ensoGrad" x1="0%" y1="0%" x2="100%" y2="100%">
                         <stop offset="0%" style="stop-color:#5d7a99;stop-opacity:0.3" />
@@ -21,68 +25,68 @@ import Card from '../components/Card.astro';
                 <circle cx="140" cy="140" r="90" fill="none" stroke="url(#ensoGrad)" stroke-width="2" opacity="0.4"/>
                 <circle cx="140" cy="140" r="60" fill="none" stroke="url(#ensoGrad)" stroke-width="1.5" opacity="0.3"/>
                 <path d="M 140 20 A 120 120 0 0 1 260 140" fill="none" stroke="#3498db" stroke-width="6" stroke-linecap="round" opacity="0.7"/>
-            </svg>
+            </svg> -->
         </div>
     </section>
-
+    
     <section class="content-grid">
         <Card
             title="Mantras"
-            description="Short, potent phrases to center awareness. Begin with breath, repeat softly, and let the resonance settle."
-            meta='Start with "So-Ham" and "Om Shanti."'
+            description="Collection of mantras in Sanskrit with translations, definitions, notes, and links to more resources."
+            href="/mantras"
         />
 
         <Card
-            title="Daily Quotes"
-            description="A verse a day from the Yoga Sutras and Bhagavad Gita—contemplative wisdom to carry with you."
-            meta="New quote each day."
+            title="Daily Verse"
+            description="A verse each day from the Yoga Sutras."
+            href="/daily-quotes"
         />
 
         <Card
             title="Resources"
-            description="Guides, reading lists, and links to my content and other teachers supporting the Kriya Yoga path."
-            meta="Books, articles & audio available."
+            description="Curated list of books, websites, and other useful resources."
+            href="/resources"
         />
 
         <Card
-            title="About"
-            description="Our intention is simplicity: remove what's not needed, support what is, and invite quiet transformation."
-            meta="Based in practice, informed by lineage."
+            title="About Me"
+            description="A bit of info about me (in case you're curious)."
+            href="/about"
         />
     </section>
 
     <section class="featured">
         <div class="featured-content">
-            <h2>My Content & Links</h2>
+            <h2>Links to My Content</h2>
             <div class="link-list">
-                <div class="link-item">
-                    <div class="link-icon">▶</div>
-                    <div class="link-content">
-                        <h3>YouTube Channel</h3>
-                        <p>Video teachings on Kriya practices and meditation guidance</p>
-                    </div>
-                </div>
-                <div class="link-item">
-                    <div class="link-icon">✍</div>
-                    <div class="link-content">
-                        <h3>Substack</h3>
-                        <p>In-depth explorations of mantras and sacred texts</p>
-                    </div>
-                </div>
-                <div class="link-item">
-                    <div class="link-icon">🎵</div>
-                    <div class="link-content">
-                        <h3>TikTok</h3>
-                        <p>Short-form spiritual content and reflections</p>
-                    </div>
-                </div>
-                <div class="link-item">
-                    <div class="link-icon">💬</div>
-                    <div class="link-content">
-                        <h3>Threads</h3>
-                        <p>Ongoing conversations about practice and philosophy</p>
-                    </div>
-                </div>
+                <LinkItem
+                    href="https://www.youtube.com/@VisionsOnThePath"
+                    iconSrc="/images/youtube-icon.svg"
+                    iconAlt="YouTube"
+                    title="YouTube: Visions on the Path">
+                    <p>YouTube channel with videos related to Kriya Yoga, meditation, and spirituality</p>
+                </LinkItem>
+                <LinkItem
+                    href="https://visionsonthepathblog.substack.com"
+                    iconSrc="/images/votp-substack-logo.png"
+                    iconAlt="Visions on the Path Blog Logo"
+                    title="Blog: Visions on the Path">
+                    <p>Writings about spirituality, my spiritual journey, and thoughts</p>
+                </LinkItem>
+                <LinkItem
+                    href="https://memoriesofhome.substack.com/"
+                    iconSrc="/images/memories-of-home-logo.webp"
+                    iconAlt="Memories of Home Logo"
+                    title="Blog: Memories of Home">
+                    <p>Blog posts intended to remind people of the the love and beauty in our heart and the world.</p>
+                </LinkItem>
+                <LinkItem
+                    href="https://mindfulai.substack.com/"
+                    iconSrc="/images/mindful-ai-logo.png"
+                    iconAlt="Mindful AI Logo"
+                    title="Blog: Mindful AI">
+                    <p>Examples of using GenAI for spiritual pursuits and psychological wellbeing.</p>
+                </LinkItem>
             </div>
         </div>
     </section>

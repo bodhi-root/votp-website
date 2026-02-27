@@ -3,13 +3,15 @@ interface Props {
     title: string;
     description: string;
     meta?: string;
+    href?: string;
 }
 
-const { title, description, meta } = Astro.props;
+const { title, description, meta, href } = Astro.props;
+const Tag = href ? 'a' : 'div';
 ---
 
-<div class="card">
+<Tag class="card" href={href}>
     <h2>{title}</h2>
     <p>{description}</p>
     {meta && <p class="card-meta">{meta}</p>}
-</div>
+</Tag>
