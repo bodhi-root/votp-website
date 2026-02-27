@@ -13,7 +13,7 @@ import LinkItem from '../components/LinkItem.astro';
             <p>Namaste.</p>
         </div>
         <div class="hero-visual">
-            <img src="/images/lotus-flower-homepage.png" alt="Enso Circle" width="280" height="280" />
+            <img src={`${import.meta.env.BASE_URL}images/lotus-flower-homepage.png`} alt="Enso Circle" width="280" height="280" />
             <!-- <svg width="280" height="280" viewBox="0 0 280 280" xmlns="http://www.w3.org/2000/svg">
                 <defs>
                     <linearGradient id="ensoGrad" x1="0%" y1="0%" x2="100%" y2="100%">
@@ -33,25 +33,25 @@ import LinkItem from '../components/LinkItem.astro';
         <Card
             title="Mantras"
             description="Collection of mantras in Sanskrit with translations, definitions, notes, and links to more resources."
-            href="/mantras"
+            href={`${import.meta.env.BASE_URL}mantras`}
         />
 
         <Card
             title="Daily Verse"
             description="A verse each day from the Yoga Sutras."
-            href="/daily-quotes"
+            href={`${import.meta.env.BASE_URL}daily-quotes`}
         />
 
         <Card
             title="Resources"
             description="Curated list of books, websites, and other useful resources."
-            href="/resources"
+            href={`${import.meta.env.BASE_URL}resources`}
         />
 
         <Card
             title="About Me"
             description="A bit of info about me (in case you're curious)."
-            href="/about"
+            href={`${import.meta.env.BASE_URL}about`}
         />
     </section>
 
@@ -61,28 +61,28 @@ import LinkItem from '../components/LinkItem.astro';
             <div class="link-list">
                 <LinkItem
                     href="https://www.youtube.com/@VisionsOnThePath"
-                    iconSrc="/images/youtube-icon.svg"
+                    iconSrc={`${import.meta.env.BASE_URL}images/youtube-icon.svg`}
                     iconAlt="YouTube"
                     title="YouTube: Visions on the Path">
                     <p>YouTube channel with videos related to Kriya Yoga, meditation, and spirituality</p>
                 </LinkItem>
                 <LinkItem
                     href="https://visionsonthepathblog.substack.com"
-                    iconSrc="/images/votp-substack-logo.png"
+                    iconSrc={`${import.meta.env.BASE_URL}images/votp-substack-logo.png`}
                     iconAlt="Visions on the Path Blog Logo"
                     title="Blog: Visions on the Path">
                     <p>Writings about spirituality, my spiritual journey, and thoughts</p>
                 </LinkItem>
                 <LinkItem
                     href="https://memoriesofhome.substack.com/"
-                    iconSrc="/images/memories-of-home-logo.webp"
+                    iconSrc={`${import.meta.env.BASE_URL}images/memories-of-home-logo.webp`}
                     iconAlt="Memories of Home Logo"
                     title="Blog: Memories of Home">
                     <p>Blog posts intended to remind people of the the love and beauty in our heart and the world.</p>
                 </LinkItem>
                 <LinkItem
                     href="https://mindfulai.substack.com/"
-                    iconSrc="/images/mindful-ai-logo.png"
+                    iconSrc={`${import.meta.env.BASE_URL}images/mindful-ai-logo.png`}
                     iconAlt="Mindful AI Logo"
                     title="Blog: Mindful AI">
                     <p>Examples of using GenAI for spiritual pursuits and psychological wellbeing.</p>

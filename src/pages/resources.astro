@@ -34,28 +34,28 @@ import Panel from '../components/Panel.astro';
             <div class="link-list">
                 <LinkItem
                     href="https://www.youtube.com/@VisionsOnThePath"
-                    iconSrc="/images/youtube-icon.svg"
+                    iconSrc={`${import.meta.env.BASE_URL}images/youtube-icon.svg`}
                     iconAlt="YouTube"
                     title="YouTube: Visions on the Path">
                     <p>YouTube channel with videos related to Kriya Yoga, meditation, and spirituality</p>
                 </LinkItem>
                 <LinkItem
                     href="https://visionsonthepathblog.substack.com"
-                    iconSrc="/images/votp-substack-logo.png"
+                    iconSrc={`${import.meta.env.BASE_URL}images/votp-substack-logo.png`}
                     iconAlt="Visions on the Path Blog Logo"
                     title="Blog: Visions on the Path">
                     <p>Writings about spirituality, my spiritual journey, and thoughts</p>
                 </LinkItem>
                 <LinkItem
                     href="https://memoriesofhome.substack.com/"
-                    iconSrc="/images/memories-of-home-logo.webp"
+                    iconSrc={`${import.meta.env.BASE_URL}images/memories-of-home-logo.webp`}
                     iconAlt="Memories of Home Logo"
                     title="Blog: Memories of Home">
                     <p>Blog posts intended to remind people of the the love and beauty in our heart and the world.</p>
                 </LinkItem>
                 <LinkItem
                     href="https://mindfulai.substack.com/"
-                    iconSrc="/images/mindful-ai-logo.png"
+                    iconSrc={`${import.meta.env.BASE_URL}images/mindful-ai-logo.png`}
                     iconAlt="Mindful AI Logo"
                     title="Blog: Mindful AI">
                     <p>Examples of using GenAI for spiritual pursuits and psychological wellbeing.</p>
@@ -71,18 +71,18 @@ import Panel from '../components/Panel.astro';
                 <LinkItem
                     href="https://kriyayogaonline.com/"
                     title="kriyayogaonline.com"
-                    iconSrc="/images/resources/kriyayogaonline-logo.png">
+                    iconSrc={`${import.meta.env.BASE_URL}images/resources/kriyayogaonline-logo.png`}>
                     <p>Ryan's Kriya Yoga homepage. Online classes and meditation retreats.</p>
                 </LinkItem>
                 <LinkItem
                     href="https://www.patreon.com/cw/KriyaYoga"
                     title="Kriya Yoga Patreon"
-                    iconSrc="/images/resources/kriyayogaonline-logo.png">
+                    iconSrc={`${import.meta.env.BASE_URL}images/resources/kriyayogaonline-logo.png`}>
                     <p>Ryan's Patreon to support his teaching and get early/exclusive content.</p>
                 </LinkItem>
                 <LinkItem
                     href="https://www.youtube.com/@KriyaYogaOnline"
-                    iconSrc="/images/youtube-icon.svg"
+                    iconSrc={`${import.meta.env.BASE_URL}images/youtube-icon.svg`}
                     iconAlt="YouTube"
                     title="YouTube: Kriya Yoga Online">
                     <p>YouTube channel with hundreds of videos.</p>
@@ -112,7 +112,7 @@ import Panel from '../components/Panel.astro';
             <div class="link-list">
                 <LinkItem
                     href="https://www.youtube.com/@BabaRamDassChannel"
-                    iconSrc="/images/youtube-icon.svg"
+                    iconSrc={`${import.meta.env.BASE_URL}images/youtube-icon.svg`}
                     iconAlt="YouTube"
                     title="YouTube: Baba Ram Dass">
                     <p>Great collection of Ram Dass lectures.</p>
@@ -120,25 +120,25 @@ import Panel from '../components/Panel.astro';
                 <LinkItem
                     title="Yoga Sutras (Hari Dass)"
                     href="https://www.amazon.com/Yoga-Sutras-Patanjali-Study-Samadhi/dp/0918100208"
-                    iconSrc="/images/resources/yoga-sutras-hari-dass-book.jpg">
+                    iconSrc={`${import.meta.env.BASE_URL}images/resources/yoga-sutras-hari-dass-book.jpg`}>
                     <p>Amazing translation and commentary on the Yoga Sutras by Baba Hari Dass (Ram Dass's teacher)</p>
                 </LinkItem>
                 <LinkItem
                     title="Be As You Are (Ramana Maharshi)"
                     href="https://www.amazon.com/Be-As-You-Are-Teachings-ebook/dp/B002RI9JS2"
-                    iconSrc="/images/resources/be-as-you-are-book.jpg">
+                    iconSrc={`${import.meta.env.BASE_URL}images/resources/be-as-you-are-book.jpg`}>
                     <p>The best book I've found on Ramana Maharshi's teachings.</p>
                 </LinkItem>
                 <LinkItem
                     title="A Search in Secret India"
                     href="https://www.amazon.com/Search-Secret-India-Unabridged-ebook/dp/B07X2CB25Y"
-                    iconSrc="/images/resources/search-in-secret-india-book.jpg">
+                    iconSrc={`${import.meta.env.BASE_URL}images/resources/search-in-secret-india-book.jpg`}>
                     <p>If you've ever wondered what it would be like to travel to India in search of a guru, this book will take you there.</p>
                 </LinkItem>
                 <LinkItem
                     title="Sri M Autobiography"
                     href="https://www.amazon.com/Apprenticed-Himalayan-Master-Yogis-Autobiography-ebook/dp/B007F2I3F0"
-                    iconSrc="/images/resources/apprenticed-to-a-himalayan-master-book.webp">
+                    iconSrc={`${import.meta.env.BASE_URL}images/resources/apprenticed-to-a-himalayan-master-book.webp`}>
                     <p>This was the book that first got me interested in Kriya Yoga. I'm not sure what I think of it now, but it's still worth mentioning.</p>
                 </LinkItem>
             </div>
@@ -164,7 +164,7 @@ import Panel from '../components/Panel.astro';
             <div class="link-list">
                 <LinkItem
                     href="https://www.amazon.com/Emmanuels-Book-Manual-Living-Comfortably/dp/0553343874"
-                    iconSrc="/images/resources/emmanuels-book.webp"
+                    iconSrc={`${import.meta.env.BASE_URL}images/resources/emmanuels-book.webp`}
                     title="Emmanuel's Book">
                     <p>An amazing book that describes the universe as unity and love.</p>
                 </LinkItem>
@@ -174,9 +174,9 @@ import Panel from '../components/Panel.astro';
                     <p>The Law of One material online (and free).</p>
                 </LinkItem>
                 <LinkItem
-                    title="Seth Speaks"    
+                    title="Seth Speaks"
                     href="https://www.amazon.com/Seth-Speaks-Eternal-Validity-Soul-ebook/dp/B007QQU9DO"
-                    iconSrc="/images/resources/seth-speaks-book.jpg">
+                    iconSrc={`${import.meta.env.BASE_URL}images/resources/seth-speaks-book.jpg`}>
                     <p>Seth's first book. Interesting (but a little bit "out there").</p>
                 </LinkItem>
             </div>
