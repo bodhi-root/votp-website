@@ -7,7 +7,7 @@ import yogaSutras from '../data/yoga_sutras.json';
     <section class="hero">
         <div class="hero-content">
             <h1>Daily Verse</h1>
-            <p>Random sutra from the Yoga Sutras</p>
+            <p>A verse each day from the Yoga Sutras.</p>
         </div>
     </section>
 
@@ -26,11 +26,8 @@ import yogaSutras from '../data/yoga_sutras.json';
                 <div class="verse-content">
                     <p class="verse-date" id="verse-date">Loading...</p>
                     <h2 class="verse-title" id="verse-title">Yoga Sutra</h2>
-
                     <p class="verse-devanagari" id="verse-devanagari"></p>
-
                     <p class="verse-iast" id="verse-iast"></p>
-
                     <p class="verse-english" id="verse-english"></p>
                 </div>
 
@@ -214,6 +211,7 @@ import yogaSutras from '../data/yoga_sutras.json';
 
         .verse-content {
             padding: 2rem 1rem;
+            overflow-x: scroll;
         }
 
         .verse-devanagari {
