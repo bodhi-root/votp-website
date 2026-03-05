@@ -183,7 +183,7 @@ nav a:hover {
 
 .link-item {
     display: flex;
-    align-items: center;
+    align-items: start;
     gap: 1rem;
     padding: 1rem;
     background: white;
@@ -200,8 +200,7 @@ nav a:hover {
     text-decoration: none;
 }
 
-.link-item h3,
-.link-item .link-description {
+.panel a.link-item:hover {
     text-decoration: none;
 }
 
@@ -211,7 +210,7 @@ nav a:hover {
     width: 3.75rem;
     height: 3.75rem;
     display: flex;
-    align-items: center;
+    align-items: start;
     justify-content: center;
 }
 
@@ -221,6 +220,7 @@ nav a:hover {
     /*height: 100%;*/
     object-fit: contain;
     border-radius: 8px;
+    margin-top: 4px;
 }
 
 .link-content h3 {
@@ -247,7 +247,7 @@ nav a:hover {
 
 .link-description a:hover {
     color: #2c3e50;
-    text-decoration: underline;
+    text-decoration: none;
 }
 
 .featured-grid {
@@ -617,10 +617,6 @@ footer p {
         padding: 0 1.5rem;
         grid-template-columns: 1fr;
         margin: 1.5rem auto 4rem auto;
-    }
-
-    .logo {
-        font-size: 1.2rem;
     }
 
     .link-list {
